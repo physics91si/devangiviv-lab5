@@ -5,9 +5,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# TODO fill in this function
+# numerically integrates values represented in array y
 def integrate(y, dx):
-    pass
+     return np.sum((y*dx))
 
-# TODO write code here to setup arrays x and y = sin(x) and then plot them.
-# After this is done implement your integrate function above integrate y
+# Sets up arrays x and y = sin(x) and then plot them.
+
+x1 = np.arange(0, np.pi, 0.01)
+y1 = np.sin(x1)
+plt.plot(x1,y1)
+plt.show()
+
+x2 = np.arange(0, np.pi, 0.01)
+y2 = np.cos(x2)
+plt.plot(x2,y2)
+plt.show()
+
+print(integrate(y1, 0.01))
+print(integrate(y2, 0.01))
+
+print(np.trapz(y1, x=None, dx=0.1))
+print(np.trapz(y2, x=None, dx=0.1))
+

@@ -14,7 +14,11 @@ def main():
     """This function sould call noisy_packet() to get a Gaussian wave
     packet, call clean_data() to apply a low pass filter to the data and
     finally plot the result."""
-    #TODO add your code here
+    x = np.arange(-10,10,0.1)
+    y = noisy_packet(x, 5, 1, 0.2)
+    plt.plot(x,y)
+    plt.show()
+    
 
 
 def noisy_packet(x_values, k, sigma, noise_amplitude):
@@ -30,7 +34,8 @@ def clean_data(x_values,y_values):
     transform on it, filter out the high frequency noise, transform the
     signal back into real space, and return it."""
 
-    pass #TODO add your code here
-    #return y_clean
+    pass
+    
+    return y_clean
 
 main()  # calls your main function
